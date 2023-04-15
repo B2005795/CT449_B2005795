@@ -1,0 +1,141 @@
+<script>
+import HeaderShopVue from "../components/HeaderShop.vue";
+import ListUser from "../components/ListUser.vue";
+import UserService from "../services/User.service";
+import toastsVue from "../components/toasts.vue";
+import ProductService from "../services/Product.service";
+import ListProduct from "../components/ListProduct.vue";
+import Productcard from "../components/Productcard.vue";
+import Usercard from "../components/Usercard.vue";
+import toast from "../assets/js/toasts";
+import Headeradmin from "../components/headeradmin.vue";
+    export default{
+        data(){
+            return{
+                users:[],
+                products:[],
+                activeIndex:-1,
+                activeUser:-1,
+                toasts:{
+                    title:"Warning",
+                    msg:"Bạn không phải ADMIN",
+                    type:"warn",
+                    duration:3000
+                 },
+            }
+        },
+        computed:{
+             getindex(){
+                 if(this.activeIndex!=-1){
+                     const list = document.querySelectorAll(".product-item");
+                     list.forEach(element => {
+                         element.classList.remove("active");
+                     });
+                     list[this.activeIndex].classList.add("active");
+                    return this.products[this.activeIndex];
+                 }
+            },
+              getindexuser(){
+                 if(this.activeUser!=-1){
+                     const list = document.querySelectorAll(".user-item");
+                     list.forEach(element => {
+                         element.classList.remove("active");
+                     });
+                     list[this.activeUser].classList.add("active");
+                    return this.users[this.activeUser];
+                 }
+            }
+        },
+        components:{
+    Headeradmin,
+    ListUser,
+    ListProduct,
+    toastsVue,
+    Productcard,
+    Usercard,
+    Headeradmin
+},
+        methods:{
+            toast,
+                async getall(){
+            try{
+                 this.products = await ProductService.getAll();
+                 this.users = await UserService.getAll();
+            }catch(error){
+                console.log(error);
+                this.toast();
+                setTimeout(()=>{
+                    this.$router.push({name:"ShopMain"});
+                },1000);
+                }
+            },
+        },
+    created(){
+        this.getall();
+    },
+}
+</script>
+
+<template>
+    <Headeradmin></Headeradmin>   
+        <toastsVue></toastsVue>
+        <div class="header text-center mt-4"  style="background-image: url(../assets/images/footer.jpg);">
+            <!-- <h2>QUẢN TRỊ VIÊN</h2> -->
+        </div>
+        <div class="main_admin container mt-4" >
+            <!-- <div class="list_users w-50" >
+                <div class="user_heading">
+                    <h4>DANH SÁCH NGƯỜI DÙNG</h4>
+                
+                </div>
+                    <div class="list_item_user  d-flex " id="user">
+                        <ListUser :users="users"  :refeshlist="getall" v-model:activeUser="activeUser"></ListUser>
+                           <div class="card_product border border-light  text-dark"  style="padding: 30px;"  v-if="getindexuser">  
+                            <h5>Chi tiết người dùng</h5>
+                            <Usercard :users="getindexuser"></Usercard>
+                        </div>
+                    </div> 
+            </div> -->
+
+            <div class="list_products row">
+                <div class="product_heading">
+                    <h4 class="text-center col-6">DANH SÁCH SẢN PHẨM</h4>
+
+                </div>
+                    <div class="list_item_product col-6" id="product" >
+                        <ListProduct :products="products" :refeshlist="getall" :getindex="getindex" v-model:activeIndex="activeIndex"></ListProduct>
+                    </div>
+                        <div class="card_product  text-dark col-4"  style="padding: 30px;" v-if="getindex">  
+                        <h5>Chi tiết sản phẩm</h5>
+                        <Productcard :products="getindex"></Productcard>
+                        <router-link
+                        :to="{
+						name: 'editproduct',
+						params: { id: getindex._id },
+					}"
+                        >
+                            <span class="text-dark">
+                                <i class="bi bi-pencil-square text-warning"></i> Chỉnh sửa</span>
+                        </router-link>
+                    </div>
+                
+                    <router-link to="/addproduct">
+                        <button class="btn btn-info mt-4 fw-bold text-white">Thêm sản phẩm</button>
+                    </router-link>
+            </div>
+        </div>
+</template>
+<style scoped>
+.list_item_product,.list_item_user{
+    max-height: 500px;
+    overflow-y:scroll;
+    text-overflow:ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+#product::-webkit-scrollbar,#user::-webkit-scrollbar  {
+    width: 6px;
+    background-color: #F5F5F5;
+} 
+</style>
