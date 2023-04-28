@@ -1,5 +1,5 @@
 
-<script>   
+<script>    
 import { mapState } from "pinia";
 import { useAuthStore } from "@/stores/Auth.store";
 import HeaderShop from "../components/HeaderShop.vue";
@@ -47,7 +47,7 @@ export default {
 			</h3>
 	
 		<hr>
-				<p class="text-break">
+				<p class="text-break"> 
 					<strong>Họ tên người dùng:</strong>
 					{{ currentUser.username }}
 				</p>

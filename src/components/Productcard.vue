@@ -8,7 +8,7 @@ export default {
 <template>
 	<div class="d-flex">
 		<div class="p-1 d-fex flex-column">
-			<img :src=" products.img[0]" alt="img" width="100">
+			<img :src=" products.img[0]" alt="img" width="150">
 		</div>
         <div>
             <div class="p-1">

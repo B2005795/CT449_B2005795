@@ -20,7 +20,7 @@
 }
 </script>
 <template>
-   <div class="row mb-4 d-flex justify-content-between align-items-center" 
+   <!-- <div class="row mb-4 d-flex justify-content-between align-items-center" 
             v-for="(item,index) in carts">
           <div class="col-md-2 col-lg-2 col-xl-2">
             <img
@@ -44,5 +44,27 @@
                 <button type="button" @click="deletedcart(index)" class="text-muted btn btn-exit"><i class="bi bi-trash3-fill text-danger"></i></button>
             </div>
             <hr class="my-4">          
-    </div>        
+    </div>         -->
+    <table class="table table-bordered cart_info text-center">
+        <thead class="table-info ">
+           <tr>
+            <th>Tên sản phẩm</th>
+            <th>Hỉnh ảnh</th>
+            <th>Giá</th>
+            <th>Số lượng</th>
+            <th>Quản lý</th>
+           </tr>
+        </thead>
+        <tbody v-for="(item,index) in carts">
+            <tr>
+                <td>{{item.title}}</td>
+                <td class="col-md-2 col-lg-2 col-xl-2">
+                    <img :src="item.img" class="img-fluid rounded-3" alt="Cotton T-shirt" ></td>
+                <td>{{ item.price }}</td>
+                <td>{{item.quantity}}</td>
+                <td><button type="button" @click="deletedcart(index)" class="text-muted btn btn-exit"><i class="bi bi-trash3-fill text-danger"></i></button></td>
+            </tr>
+            
+        </tbody>
+    </table>
 </template>

@@ -19,7 +19,7 @@ import InputSearch from './inputSearch.vue';
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link " aria-current="page" href="/admin">Danh sách người dùng</a>
+          <a class="nav-link " aria-current="page" href="/user">Danh sách người dùng</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="/admin" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">

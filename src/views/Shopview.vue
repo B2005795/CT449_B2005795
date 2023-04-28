@@ -47,10 +47,46 @@
 <div style="margin: 20px 100px;">
     <div style="text-align: center; margin: 30px 0;" class="heading">
         <h3>TOP SẢN PHẨM SHOP</h3>
-        <h6>Những sản phẩm tự làm hot nhất</h6>
+        <!-- <h6>Những sản phẩm tự làm hot nhất</h6> -->
     </div>
-    <div class="flex-row auto-mx text-center" >
-        <div class="d-sm-flex flex-wrap" id="hoa">
+    <div class="row " >
+
+       
+            <div class="col-sm-3">
+                <div class="d-sm-flex flex-wrap" id="hoa">
+            <div class="card m-1" style="width: 18rem;" >
+                <div class="wrapper-img">
+                    <!-- <div class="image_slider"> -->
+                        <a href="/hoa">
+                        <div class="image_item" >
+                            <img src="../assets/images/product/hoa1.jpg" class="card-img-top" alt="...">
+                           <h1> Quà tặng</h1>
+                        </div>
+                    </a>
+                    <!-- </div> -->
+                </div>
+                </div>
+                </div>
+        
+            </div>
+            <div class="col-sm-3">
+                <div class="d-sm-flex flex-wrap" id="hoa">
+            <div class="card m-1" style="width: 18rem;" >
+                <div class="wrapper-img">
+                    <!-- <div class="image_slider"> -->
+                        <a href="/hoa">
+                        <div class="image_item" >
+                            <img src="../assets/images/product/hoa1.jpg" class="card-img-top" alt="...">
+                        </div>
+                    </a>
+                    <!-- </div> -->
+                </div>
+                </div>
+                </div>
+        
+            </div>
+       
+        <!-- <div class="d-sm-flex flex-wrap" id="hoa">
             <div class="card m-1" style="width: 18rem;"  v-for="item in Products" v-show="item.categories === 'Hoa'">
                 <div class="wrapper-img">
                     <div class="image_slider">
@@ -73,7 +109,7 @@
                 </div>
                 
             </div>
-        </div> 
+        </div>  -->
      <div style="text-align: center; margin: 30px 0;" class="heading">
 
         <h3>TOP NGUYÊN VẬT LIỆU</h3>
@@ -133,8 +169,8 @@
 </template>
 <style scoped>   
     .wrapper-img{
-        width: 100%;
-        height: 100%;
+        width: 280px;
+        height: 280px;
         overflow: hidden;
     }
     .image_slider{

@@ -48,13 +48,13 @@ export default{
        },
        registerproduct(){
          if(this.carts.length > 0){
-          this.toasts.title = "Success",
+          // this.toasts.title = "Success",
           this.toasts.msg = "Đã thành toán",
           this.toasts.type = "success",
           this.toasts.duration=2000,
           this.toastsjs();
          }else{
-              this.toasts.title = "Failed",
+              // this.toasts.title = "Failed",
               this.toasts.msg = "Bạn chưa có sản phẩm",
               this.toasts.type = "error",
               this.toasts.duration=2000,
@@ -77,7 +77,7 @@ export default{
 <template>
   <HeaderShop></HeaderShop>
   <toastsVue></toastsVue>
-    <section class="h-100 h-custom" style="background-color: rgb(234,232,232);">
+    <section class="h-100 h-custom" >
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-12">
@@ -87,56 +87,77 @@ export default{
               <div class="col-lg-8">
                 <div class="p-5">
                   <div class="d-flex justify-content-between align-items-center mb-5">
-                    <h1 class="fw-bold mb-0 text-black">Giỏ hàng</h1>
-                    <h6 class="mb-0 text-muted">{{carts.length}} sản phẩm</h6>
+                    <h2 class="fw-bold mb-0 text-black text-center">Giỏ hàng của bạn</h2>
+                    <!-- <h6 class="mb-0 text-muted">{{carts.length}} sản phẩm</h6> -->
                   </div>
+                  
+                  <!-- <hr class="my-4"> -->
+                  <!-- <div class="d-flex justify-content-between mb-5"><h6>Tên sản phẩm</h6>
+                  <h6>Giá</h6> 
+                <h6>Quản lý</h6></div> -->
                   <hr class="my-4">
                   <CartItem :refeshlistcart="refeshlistcart" :carts="carts" @deleted:cartIndex="delcart"></CartItem>
-                  <div class="pt-5">
+                  <hr class="my-4">
+                  <!-- <div class="pt-5">
                     <h6 class="mb-0 btn btn-outline-info"><router-link to="/" class="text-body"><i
                           class="fas fa-long-arrow-alt-left me-2 "></i>Trang chủ</router-link></h6>
+                  </div> -->
+                  <div class="d-flex justify-content-between mb-5">
+                    <h5 class="text-dark">TỔNG TIỀN</h5>
+                    <h5 class="text-dark">{{total()}}<span> VNĐ</span></h5>
                   </div>
+                   <button type="button" class="btn btn-warning btn-block btn-lg"
+                    data-mdb-ripple-color="white" @click="registerproduct()">Đặt hàng</button>
                 </div>
               </div>
               <div class="col-lg-4 bg-grey">
                 <div class="p-5">
-                  <h3 class="fw-bold mb-5 mt-2 pt-1">ĐẶT HÀNG</h3>
+                  <h3 class="d-flex fw-bold mb-5 mt-2 pt-1">ĐẶT HÀNG</h3>
                   <hr class="my-4">
 
-                  <div class="d-flex justify-content-between mb-4">
-                    <h5 class="text-uppercase"> {{carts.length}} Sản phẩm</h5>
-                    <h5>{{total()}}<span> VNĐ</span></h5>
+                  <div class="d-flex justify-content-end mb-4">
+                    <h6 class="text-uppercase"> {{carts.length}} Sản phẩm</h6>
+                    
+                    
                   </div>
+                  <div class="d-flex justify-content-between mb-5">
+                    <h6>Thành tiền</h6>
+                    <h6  class=" d-flex justify-content-end"> {{total()}}<span> VNĐ</span></h6>
+                  </div>
+                 
 
                   <h5 class="text-uppercase mb-3"></h5>
 
                   <div class="mb-4 pb-2">
-                    <select class="select form-select" aria-label="Default select example" >
-                      <option selected>Chọn hình thức thanh toán</option>
+                    <select class="form-select" aria-label="Default select example" >
+                      <option selected>---Hình thức thanh toán---</option>
                       <option value="1">Thanh toán tại cửa hàng</option>
                       <option value="2">Giao hàng tiết kiệm</option>
                       <option value="3">Chuyển phát nhanh</option>
                     </select>
                   </div>
-
-                  <h5 class="text-uppercase mb-3"></h5>
+                  <div class="text-uppercase mb-3">
+                    <h6>Ghi chú đơn hàng</h6>
+                    <textarea name="" id="" cols="40" rows="3"></textarea>
+                  </div>
+                  <!-- <h5 class="text-uppercase mb-3"></h5>
 
                   <div class="mb-5">
                     <div class="form-outline">
                       <input type="text" id="form3Examplea2" class="form-control form-control-lg" />
                       <label class="form-label btn-sm" for="form3Examplea2">Nhập mã code</label>
                     </div>
-                  </div>
+                  </div> -->
 
                   <hr class="my-4">
 
-                  <div class="d-flex justify-content-between mb-5">
+                  <!-- <div class="d-flex justify-content-between mb-5">
                     <h5 class="text-uppercase">Thành tiền</h5>
                     <h5>{{total()}}<span> VNĐ</span></h5>
-                  </div>
+                  </div> -->
 
-                  <button type="button" class="btn btn-warning btn-block btn-lg"
-                    data-mdb-ripple-color="dark" @click="registerproduct()">Đặt hàng</button>
+                  <!-- <button type="button" class="btn btn-warning btn-block btn-lg"
+                    data-mdb-ripple-color="white" @click="registerproduct()">Đặt hàng</button> -->
 
                 </div>
               </div>

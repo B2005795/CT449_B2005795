@@ -100,7 +100,7 @@
     <toastsVue></toastsVue>
     <div class="heading">
         <div class="title" >
-        <h2 class="text-dark text-center" style="padding-left: 20px;">CHI TIẾT SẢN PHẨM<h5>{{detailproduct.title}}</h5>
+        <h2 class="text-dark text-center mt-4" style="padding-left: 20px;">CHI TIẾT SẢN PHẨM<h2 class="mt-3">{{detailproduct.title}}</h2>
         </h2>
         
         </div>
@@ -114,25 +114,25 @@
                 <img :src="img" class="d-block w-100" alt="..." style="border-radius: 8px ;">
                 </div>
             </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
-        </button>
+        </button> -->
         </div>
     </div>
             <div class="info_product col" style="margin-left: 30px;">
                 <P class="fw-bold"> Giá</P>
                 <span class="pricte">{{detailproduct.price}} VNĐ</span>
-                <div class="size_product">
+                <!-- <div class="size_product">
                     <p class="fw-bold">Phân loại</p>
                     <div class="list_btn_size">
                         <p class="text-secondary">{{detailproduct.size}}</p>
                     </div>
-                </div>
+                </div> -->
                  <div class="color_product">
                     <p class="fw-bold">Màu sắc</p>
                     <div class="list_btn_color">
@@ -143,7 +143,7 @@
                     <p class="fw-bold">Nhập số lượng</p>
                     <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
                     <input id="quantity" name="quantity" type="number" v-model="sub_quantity"
-                        class="form-control form-control-sm" style="width:50px; border: black;"/>
+                        class="form-control form-control-sm " style="width:50px; border: black;"/>
                     </div>
                 </div>
                 <div class="btn_product">   
