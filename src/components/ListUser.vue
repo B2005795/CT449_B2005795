@@ -24,7 +24,7 @@ import toastjs from "../assets/js/toasts";
                 try{
                     await UserService.delete(id);
                     this.refeshlist();
-                    this.toasts.title = "Thành công",
+                    this.toasts.title = "Success",
                     this.toasts.msg="Đã xóa người dùng thành công",
                     this.toasts.type = "success",
                     this.toasts.duration=2000

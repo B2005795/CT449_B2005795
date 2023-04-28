@@ -9,6 +9,9 @@ class CartService {
     async getAll() {
         return (await this.http.get("/")).data;
     }
+    async deleteAll() {
+        return (await this.http.delete("/")).data;
+    }
     async get(id) {
         return (await this.http.get(`/find/${id}`)).data;
     }
@@ -18,6 +21,8 @@ class CartService {
     async delete(id) {
         return (await this.http.delete(`/${id}`)).data;
     }
+
+   
 }
 
 export default new CartService();

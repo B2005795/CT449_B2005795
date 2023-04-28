@@ -11,11 +11,11 @@ export default {
 			<img :src=" products.img[0]" alt="img" width="150">
 		</div>
         <div>
-            <div class="p-1">
+            <div class="text p-1">
                 <strong>Danh mục:</strong>
                 {{products.categories}}
             </div>
-            <div class="p-1">
+            <div class="text p-1">
                 <strong>Giá :</strong>
                 {{products.price}}
             </div>
@@ -31,3 +31,8 @@ export default {
         </div>
 	</div>
 </template>
+<style>
+.text{
+    font-size: 20px;
+}
+</style>

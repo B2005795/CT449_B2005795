@@ -46,21 +46,35 @@ export default{
        refeshlistcart(){
          this.getcarts();
        },
-       registerproduct(){
+
+      async registerproduct(){
          if(this.carts.length > 0){
-          // this.toasts.title = "Success",
+           this.toasts.title = "Success",
           this.toasts.msg = "Đã thành toán",
           this.toasts.type = "success",
           this.toasts.duration=2000,
+         
           this.toastsjs();
+          await CartService.deleteAll({})
+          this.refeshlistcart();
          }else{
-              // this.toasts.title = "Failed",
+               this.toasts.title = "Failed",
               this.toasts.msg = "Bạn chưa có sản phẩm",
               this.toasts.type = "error",
               this.toasts.duration=2000,
               this.toastsjs();
          }
        },  
+       async removeAllCart() {
+      if (confirm("Bạn có chắc muốn xóa tất cả giỏ hàng")) {
+        try {
+          await CartService.deleteAll();
+          this.refeshlistcart();
+        } catch (error) {
+          console.log(error);
+        }
+      }
+    },
          total(){
            var total=0;
            for(var i in this.carts){
@@ -97,7 +111,11 @@ export default{
                 <h6>Quản lý</h6></div> -->
                   <hr class="my-4">
                   <CartItem :refeshlistcart="refeshlistcart" :carts="carts" @deleted:cartIndex="delcart"></CartItem>
+                  <button class="btn btn-sm btn-danger" @click="removeAllCart">
+          <i class="fas fa-trash"></i> Xóa tất cả
+        </button>
                   <hr class="my-4">
+                
                   <!-- <div class="pt-5">
                     <h6 class="mb-0 btn btn-outline-info"><router-link to="/" class="text-body"><i
                           class="fas fa-long-arrow-alt-left me-2 "></i>Trang chủ</router-link></h6>
@@ -106,8 +124,8 @@ export default{
                     <h5 class="text-dark">TỔNG TIỀN</h5>
                     <h5 class="text-dark">{{total()}}<span> VNĐ</span></h5>
                   </div>
-                   <button type="button" class="btn btn-warning btn-block btn-lg"
-                    data-mdb-ripple-color="white" @click="registerproduct()">Đặt hàng</button>
+                   <!-- <button type="button" class="btn btn-warning btn-block btn-lg"
+                    data-mdb-ripple-color="white" @click="registerproduct()">Đặt hàng</button> -->
                 </div>
               </div>
               <div class="col-lg-4 bg-grey">
@@ -132,14 +150,22 @@ export default{
                     <select class="form-select" aria-label="Default select example" >
                       <option selected>---Hình thức thanh toán---</option>
                       <option value="1">Thanh toán tại cửa hàng</option>
-                      <option value="2">Giao hàng tiết kiệm</option>
-                      <option value="3">Chuyển phát nhanh</option>
+                      <option value="2">Chuyển khoản</option>
+                    
                     </select>
                   </div>
-                  <div class="text-uppercase mb-3">
+                  <div class="mb-4 pb-2">
+                    <select class="form-select" aria-label="Default select example" >
+                      <option selected>---Hình thức giao hàng---</option>
+                      <option value="1">Giao hàng nhanh</option>
+                      <option value="2">Giao hàng tiết kiệm</option>
+                    
+                    </select>
+                  </div>
+                  <!-- <div class="text-uppercase mb-3">
                     <h6>Ghi chú đơn hàng</h6>
                     <textarea name="" id="" cols="40" rows="3"></textarea>
-                  </div>
+                  </div> -->
                   <!-- <h5 class="text-uppercase mb-3"></h5>
 
                   <div class="mb-5">
@@ -156,9 +182,9 @@ export default{
                     <h5>{{total()}}<span> VNĐ</span></h5>
                   </div> -->
 
-                  <!-- <button type="button" class="btn btn-warning btn-block btn-lg"
-                    data-mdb-ripple-color="white" @click="registerproduct()">Đặt hàng</button> -->
-
+                  <button type="button" class="btn btn-warning btn-block btn-lg"
+                    data-mdb-ripple-color="white" @click="registerproduct()">Đặt hàng</button>
+                   
                 </div>
               </div>
             </div>

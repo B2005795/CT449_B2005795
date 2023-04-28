@@ -24,14 +24,14 @@ import toastjs from "../assets/js/toasts";
                 try{
                     await ProductService.delete(id);
                     this.refeshlist();
-                    this.toasts.title = "Success",
+                     this.toasts.title = "Success",
                     this.toasts.msg="Đã xóa sản phẩm thành công",
                     this.toasts.type = "success",
                     this.toasts.duration=2000
                     this.toastjs();
                 }catch(error){
                     console.log(error);
-                    this.toasts.title = "Warning",
+                     this.toasts.title = "Warning",
                     this.toasts.msg="Bạn chưa đăng nhập hoặc bạn không phải ADMIN",
                     this.toasts.type = "warn",
                     this.toasts.duration=2000
@@ -61,5 +61,6 @@ import toastjs from "../assets/js/toasts";
     .list-group-item:hover{
         background-color:#70b1b9;
         color: azure;
+        font-size: 20px;
     }
 </style>

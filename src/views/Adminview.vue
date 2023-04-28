@@ -20,7 +20,7 @@ export default {
             activeUser: -1,
             searchText: "",
             toasts: {
-                // title: "Warning",
+                title: "Lỗi",
                 msg: "Bạn không phải ADMIN, không có quyền truy cập trang này.",
                 type: "warn",
                 duration: 3000
@@ -118,7 +118,7 @@ export default {
                 
                 </div>
                     <div class="list_item_user  d-flex " id="user">
-                        <ListUser :users="users"  :refeshlist="getall" v-model:activeUser="activeUser"></ListUser>
+                        <ListUser :users="users" :refeshlist="getall" v-model:activeUser="activeUser"></ListUser>
                            <div class="card_product border border-light  text-dark"  style="padding: 30px;"  v-if="getindexuser">  
                             <h5>Chi tiết người dùng</h5>
                             <Usercard :users="getindexuser"></Usercard>
@@ -144,8 +144,8 @@ export default {
                         name: 'editproduct',
                         params: { id: getindex._id },
                     }">
-                    <h6 class="text-dark mt-4">
-                        <i class="bi bi-pencil-square text-warning"></i> Chỉnh sửa</h6>
+                    <p class="text-dark mt-4 text">
+                        <i class="bi bi-pencil-square text-warning"></i> Chỉnh sửa</p>
                 </router-link>
             </div>
 
@@ -170,5 +170,8 @@ export default {
 #user::-webkit-scrollbar {
     width: 6px;
     background-color: #F5F5F5;
+}
+.text{
+    font-size: 20px;
 }
 </style>

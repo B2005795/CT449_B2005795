@@ -8,7 +8,7 @@ export default {
     return {
       carts: [],
       toasts: {
-        title: "Warning",
+        title: "Lỗi",
         msg: "Bạn chưa đăng nhập",
         type: "warn",
         duration: 3000
@@ -27,6 +27,7 @@ export default {
     toast,
     ...mapActions(useAuthStore, ["logout", "loadAuthState"]),
     slideSearch: function () {
+      this.
       this.$el.querySelector("#input_search").classList.toggle("input_search");
       this.$el.querySelector("#input_search").focus();
     },
@@ -143,14 +144,15 @@ export default {
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li><a class="dropdown-item" href="#NL">Hoa trang trí</a></li>
               <li><a class="dropdown-item" href="#NL">Cúc trang trí</a></li>
+              <li><a class="dropdown-item" href="/search">Tìm</a></li>
             </ul>
           </li>
         </ul>
 
-        <!-- <form class="d-flex flex-mb">
+        <form class="d-flex flex-mb">
         <input class="form-control me-2 hiden" id="input_search" type="search" placeholder="Tìm kiếm" aria-label="Search">
                 <button class="btn btn-outline-dart" type="button" @click="slideSearch()"><i class="bi bi-search icon"></i></button>
-      </form> -->
+      </form>
         <div class="Cart">
           <div class="wrapper_cart">
             <!-- <div class="cart_link" id="cart_link">
@@ -181,8 +183,8 @@ export default {
                 </div> -->
               <!-- </div>
             </div> -->
-
-            <a href="/Cart"><i class="bi bi-bag-fill icon icon_cart" ></i></a>
+            <i class="bi bi-bag-fill icon icon_cart" ></i>
+            <!-- <a href="/Cart"><i class="bi bi-bag-fill icon icon_cart" ></i></a> -->
             <span class="quantity_cart">{{ getlengthcarts }}</span>
           </div>
         </div>
@@ -302,9 +304,9 @@ export default {
   border-radius: 6px;
 }
 
-.hiden {
+/* .hiden {
   visibility: hidden;
-}
+} */
 
 .input_search {
   visibility: visible;

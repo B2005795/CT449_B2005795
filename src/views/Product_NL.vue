@@ -44,10 +44,10 @@ export default {
         <SliderShop></SliderShop>
     </div>
 
-    <div class="container">
+    <!-- <div style="margin: 20px 100px;">
         <div style="text-align: center; margin: 30px 0;" class="heading">
-            <h3>SẢN PHẨM SHOP</h3>
-            <h4>Danh mục: Quà tặng</h4>
+            <h3>TOP SẢN PHẨM SHOP</h3>
+            <h6>Những sản phẩm tự làm hot nhất</h6>
         </div>
         <div class="flex-row auto-mx text-center">
             <div class="d-sm-flex flex-wrap" id="hoa">
@@ -73,11 +73,12 @@ export default {
                     </div>
 
                 </div>
-            </div>
-            <!-- <div style="text-align: center; margin: 30px 0;" class="heading">
+            </div> -->
+            <div class="container">
+            <div style="text-align: center; margin: 30px 0;" class="heading">
 
-                <h3>TOP NGUYÊN VẬT LIỆU</h3>
-                <h6>Những vật liệu quen thuộc</h6>
+                <h3>SẢN PHẨM SHOP</h3>
+              <H4>Danh mục: Nguyên vật liệu</H4>
             </div>
             <div class="d-sm-flex flex-wrap" id="NL">
                 <div class="card m-1" style="width: 18rem;" v-for="item in Products" v-show="item.categories === 'NL'">
@@ -100,7 +101,7 @@ export default {
                     </div>
                 </div>
             </div>
-            <hr> -->
+            <hr>
             <!-- <div style="text-align: center; margin: 30px 0;" class="heading">
                 <h3>TOP MÓC KHÓA HOT</h3>
                 <h6>Những sản phẩm móc khóa dễ thương</h6>
@@ -127,26 +128,28 @@ export default {
                     </div>
                 </div>
             </div> -->
-        </div>
-    </div>
+        <!-- </div>
+    </div> -->
     <div>
     </div>
+    </div>
 </template>
-<style scoped>   
-    .wrapper-img{
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-    }
-    .image_slider{
+<style scoped>   .wrapper-img {
+       width: 100%;
+       height: 100%;
+       overflow: hidden;
+   }
+
+   .image_slider {
        display: flex;
        transition: all .8s ease;
-       
-    }
-    .image_slider:hover{ 
-       transform: translateX(-100%);
-    }
-   .image_item{
-       flex: 1 0 100%;
+
    }
-</style>
+
+   .image_slider:hover {
+       transform: translateX(-100%);
+   }
+
+   .image_item {
+       flex: 1 0 100%;
+   }</style>

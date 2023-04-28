@@ -8,6 +8,11 @@ const routes = [
         component: ShopView,
     },
     {
+        path: "/search",
+        name: "search",
+        component: () => import("@/views/Search_t.vue"),
+    },
+    {
         path: "/Cart",
         name: "CartShop",
         component: () => import("@/views/CartShop.vue"),
@@ -62,7 +67,16 @@ const routes = [
         name: "hoa",
         component: () => import("@/views/Product_p.vue"),
     },
-
+    {
+        path: "/nguyenlieu",
+        name: "nguyenlieu",
+        component: () => import("@/views/Product_NL.vue"),
+    },
+    {
+        path: "/mockhoa",
+        name: "mockhoa",
+        component: () => import("@/views/Product_MK.vue"),
+    },
 ];
 
 const router = createRouter({

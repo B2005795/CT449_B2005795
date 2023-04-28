@@ -43,7 +43,7 @@
         async updateUser(){
             try{
                 await UserService.update(this.infouser._id,this.infouser);
-                    this.toasts.title="Thành công",
+                    this.toasts.title="Success",
                     this.toasts.msg="Đã sửa thông tin vui lòng đăng nhập lại !",
                     this.toasts.type="success",
                     this.toasts.duration=3000

@@ -20,8 +20,8 @@ import inputSearch from "../components/inputSearch.vue";
                 activeUser:-1,
                 searchText: "",
                 toasts:{
-                    title:"Warning",
-                    msg:"Bạn không phải ADMIN",
+                    title:"Lỗi",
+                    msg:"Bạn không phải ADMIN, không có quyền truy cập trang này",
                     type:"warn",
                     duration:3000
                  },

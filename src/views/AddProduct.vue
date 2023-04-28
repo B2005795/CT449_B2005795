@@ -10,7 +10,7 @@ export default {
   data(){
     return {
          toasts:{
-              title:"Success",
+              title:"Thành công",
               msg:"Thêm sản phẩm thành công",
               type:"success",
               duration:2000
