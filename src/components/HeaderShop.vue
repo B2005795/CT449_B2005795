@@ -183,8 +183,8 @@ export default {
                 </div> -->
               <!-- </div>
             </div> -->
-            <i class="bi bi-bag-fill icon icon_cart" ></i>
-            <!-- <a href="/Cart"><i class="bi bi-bag-fill icon icon_cart" ></i></a> -->
+             <!-- <i class="bi bi-bag-fill icon icon_cart" ></i> -->
+            <a href="/Cart"><i class="bi bi-bag-fill icon icon_cart" ></i></a> 
             <span class="quantity_cart">{{ getlengthcarts }}</span>
           </div>
         </div>

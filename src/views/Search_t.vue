@@ -1,15 +1,16 @@
 <script>
-import SliderShop from '@/components/SliderShop.vue'
-import HeaderShop from '@/components/HeaderShop.vue'
+
+import ListUser from "../components/ListUser.vue";
+import UserService from "../services/User.service";
 import toastsVue from "../components/toasts.vue";
 import ProductService from "../services/Product.service";
 import ListProduct from "../components/ListProduct.vue";
 import Productcard from "../components/Productcard.vue";
-
+import Usercard from "../components/Usercard.vue";
 import toast from "../assets/js/toasts";
-
+import Headeradmin from "../components/headeradmin.vue";
 import inputSearch from "../components/inputSearch.vue";
-import ListPro from "../components/ListPro.vue";
+
 export default {
     data() {
         return {
@@ -18,7 +19,12 @@ export default {
             activeIndex: -1,
             activeUser: -1,
             searchText: "",
-
+            toasts: {
+                title: "Lỗi",
+                msg: "Bạn không phải ADMIN, không có quyền truy cập trang này.",
+                type: "warn",
+                duration: 3000
+            },
         }
     },
     watch: {
@@ -70,13 +76,12 @@ export default {
         }
     },
     components: {
-        HeaderShop,
-        SliderShop,
-
+        Headeradmin,
+        ListUser,
         ListProduct,
         toastsVue,
         Productcard,
-        ListPro,
+        Usercard,
         inputSearch
     },
     methods: {
@@ -101,111 +106,10 @@ export default {
 </script>
 
 <template>
-    <div class="header">
-        <HeaderShop></HeaderShop>
-    </div>
+    <Headeradmin></Headeradmin>
     <toastsVue></toastsVue>
-    <div class="slider">
-        <SliderShop></SliderShop>
-    </div>
-    <div class="header text-center mt-4" style="background-image: url(../assets/images/footer.jpg);">
-        <!-- <h2>QUẢN TRỊ VIÊN</h2> -->
-    </div>
-    <!-- <div class="main_admin container mt-4"> -->
-
-        <div class=" row ">
-
-
-<div class="col-sm-3">
-    <div class="d-sm-flex flex-wrap" id="hoa">
-        <div class="card m-1" style="width: 18rem;">
-            <div class="wrapper-img">
-                <!-- <div class="image_slider"> -->
-                <a href="/hoa">
-                    <div class="image_item">
-                        <img src="../assets/images/product/hoa1.jpg" class="card-img-top" alt="...">
-                        <h3 class="text text-center"> Quà tặng</h3>
-                    </div>
-                </a>
-                <!-- </div> -->
-            </div>
-        </div>
-    </div>
-
-</div>
-
-<div class="col-sm-3">
-    <div class="d-sm-flex flex-wrap" id="NL">
-        <div class="card m-1">
-            <div class="wrapper-img">
-                <!-- <div class="image_slider"> -->
-                <a href="/nguyenlieu">
-                    <div class="image_item">
-                        <h2 class="text text-center">Túi xách</h2>
-                        <img src="../assets/images/product/tui1.jpg" class="card-img-top" alt="...">
-                    </div>
-                </a>
-                <!-- </div> -->
-            </div>
-        </div>
-    </div>
-
-</div>
-<div class="col-sm-3">
-    <div class="d-sm-flex flex-wrap" id="NL">
-        <div class="card m-1">
-            <div class="wrapper-img">
-                <!-- <div class="image_slider"> -->
-                <a href="/nguyenlieu">
-                    <div class="image_item">
-                        <h3 class="text text-center">Nguyên vật liệu</h3>
-                        <img src="../assets/images/product/NL1.jpg" class="card-img-top" alt="...">
-                    </div>
-                </a>
-                <!-- </div> -->
-            </div>
-        </div>
-    </div>
-
-</div>
-
-
-<div class="col-sm-3">
-    <div class="d-sm-flex flex-wrap" id="NL">
-        <div class="card m-1">
-            <div class="wrapper-img">
-                <!-- <div class="image_slider"> -->
-                <a href="/mockhoa">
-                    <div class="image_item">
-                       <h3 class="text text-center">Móc khóa</h3>
-                        <img src="../assets/images/product/mockhoa1.jpg" class="card-img-top" alt="...">
-                    </div>
-                </a>
-                <!-- </div> -->
-            </div>
-        </div>
-    </div>
-
-</div>
-        <div class=" row">
-            <div class="mt-3 col-8">
-                <inputSearch v-model="searchText" />
-            </div>
-            <!-- <div class="product_heading">
-                <h4 class="text-center col-6 mt-4">DANH SÁCH SẢN PHẨM</h4>
-            </div> -->
-            <div class="" id="product">
-                <ListPro v-if="filteredProductsCount > 0" :products="filteredProducts" v-model:activeIndex="activeIndex">
-                </ListPro>
-            </div>
-            <!-- <div class="card_product  text-dark col-4" style="padding: 30px; " id="product">
-                <h4>Chi tiết sản phẩm</h4>
-                <Productcard v-if="filteredProductsCount > 0" :products="filteredProducts" v-model:activeIndex="activeIndex"></Productcard>
-               
-            </div> -->
-
-
-        </div>
+    <div class="container mt-4 mx-auto text-center">
+        <img src="../assets/images/admin.jpg" alt="">
     </div>
 </template>
 <style scoped>
@@ -224,42 +128,7 @@ export default {
     width: 6px;
     background-color: #F5F5F5;
 }
-
-.text {
+.text{
     font-size: 20px;
-}
-</style>
-<style scoped>
-.list-group-item:hover {
-    background-color: #70b1b9;
-    color: azure;
-    font-size: 20px;
-}
-
-.wrapper-img {
-    width: 280px;
-    height: 280px;
-    overflow: hidden;
-}
-
-/* .image_slider {
-    display: flex;
-    transition: all .8s ease;
-
-} */
-
-/* .image_slider:hover {
-    transform: translateX(-100%);
-} */
-
-.image_item {
-    flex: 1 0 100%;
-}
-
-.text {
-    color: #080808;
-    font-size: 25px;
-    position: absolute;
-    top: 10px
 }
 </style>

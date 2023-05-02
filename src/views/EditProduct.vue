@@ -56,7 +56,7 @@ export default {
                 this.toastjs();
             }catch(error) {
                 console.log(error);
-                    this.toasts.title = "Warning",
+                    this.toasts.title = "Lỗi",
                     this.toasts.msg="Tài khoản không phải ADMIN, không có quyền truy cập trang này",
                     this.toasts.type = "warn",
                     this.toasts.duration=2000

@@ -115,7 +115,7 @@ export default {
 
         <div class=" row ">
 
-
+<h4 class="text-center">DANH MỤC SẢN PHẨM</h4>
 <div class="col-sm-3">
     <div class="d-sm-flex flex-wrap" id="hoa">
         <div class="card m-1" style="width: 18rem;">
@@ -188,15 +188,22 @@ export default {
 
 </div>
         <div class=" row">
-            <div class="mt-3 col-8">
+            <div class="container">
+            <div style="text-align: center; margin: 30px 0;" class="heading">
+              
+              <h3> SẢN PHẨM SHOP</h3>
+              <h6>Những sản phẩm tự làm hot nhất</h6>
+          </div>
+            <div class="container">
                 <inputSearch v-model="searchText" />
             </div>
             <!-- <div class="product_heading">
                 <h4 class="text-center col-6 mt-4">DANH SÁCH SẢN PHẨM</h4>
             </div> -->
-            <div class="" id="product">
+            <div class="container mt-4" id="product">
                 <ListPro v-if="filteredProductsCount > 0" :products="filteredProducts" v-model:activeIndex="activeIndex">
                 </ListPro>
+                xem thêm
             </div>
             <!-- <div class="card_product  text-dark col-4" style="padding: 30px; " id="product">
                 <h4>Chi tiết sản phẩm</h4>
@@ -204,7 +211,7 @@ export default {
                
             </div> -->
 
-
+</div>
         </div>
     </div>
 </template>

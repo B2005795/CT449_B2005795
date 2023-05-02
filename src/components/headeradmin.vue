@@ -27,7 +27,7 @@ import InputSearch from './inputSearch.vue';
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="/addproduct">Thêm sản phẩm</a></li>
-            <li><a class="dropdown-item" href="#">Chỉnh sửa</a></li>
+            <li><a class="dropdown-item" href="/admin">Liệt kê danh sách sản phẩm</a></li>
            
           </ul>
         </li>
@@ -41,7 +41,7 @@ import InputSearch from './inputSearch.vue';
 </template>
 <style>
 .nav_admin{
-    background-image: url(../assets/images/footer.jpg);
+    background-image: url('../assets/images/footer.jpg');
     font-size: 25px;
 }
 </style>

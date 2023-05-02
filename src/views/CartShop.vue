@@ -49,8 +49,8 @@ export default{
 
       async registerproduct(){
          if(this.carts.length > 0){
-           this.toasts.title = "Success",
-          this.toasts.msg = "Đã thành toán",
+           this.toasts.title = "Thành côngd",
+          this.toasts.msg = "Đặt hàng thành công",
           this.toasts.type = "success",
           this.toasts.duration=2000,
          
@@ -58,10 +58,10 @@ export default{
           await CartService.deleteAll({})
           this.refeshlistcart();
          }else{
-               this.toasts.title = "Failed",
-              this.toasts.msg = "Bạn chưa có sản phẩm",
+               this.toasts.title = "lỗi",
+              this.toasts.msg = "Đặt hàng không thành công, vui lòng thêm sản phẩm vào giỏ hàng",
               this.toasts.type = "error",
-              this.toasts.duration=2000,
+              this.toasts.duration=3000,
               this.toastsjs();
          }
        },  
@@ -101,7 +101,7 @@ export default{
               <div class="col-lg-8">
                 <div class="p-5">
                   <div class="d-flex justify-content-between align-items-center mb-5">
-                    <h2 class="fw-bold mb-0 text-black text-center">Giỏ hàng của bạn</h2>
+                    <h2 class="fw-bold mb-0 text-black mx-auto text-center">Giỏ hàng của bạn</h2>
                     <!-- <h6 class="mb-0 text-muted">{{carts.length}} sản phẩm</h6> -->
                   </div>
                   

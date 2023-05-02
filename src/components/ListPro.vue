@@ -47,17 +47,17 @@ export default {
 <template>
     <div class="row">
         <div class="container">
-            <div style="text-align: center; margin: 30px 0;" class="heading">
+            <!-- <div style="text-align: center; margin: 30px 0;" class="heading">
                 <hr>
                 <h3> SẢN PHẨM SHOP</h3>
                 <h6>Những sản phẩm tự làm hot nhất</h6>
-            </div>
+            </div> -->
             <div class="flex-row auto-mx text-center">
                 <div class="d-sm-flex flex-wrap">
                     <div class="card m-1" style="width: 18rem;" v-for="(product, index) in products" :key="product._id"
                         @click="updateActiveIndex(index)">
                         <div class="wrapper-img">
-                            <!-- <div class="image_slider"> -->
+                            <div class="image_slider">
 
                             <div class="image_item" v-for="img in product.img">
                                 <img :src="img" class="card-img-top" alt="...">
@@ -75,7 +75,7 @@ export default {
 
                             </router-link>
 
-                            <!-- </div> -->
+                            </div>
                             <!-- </div> -->
                         </div>
                     </div>
@@ -121,23 +121,24 @@ export default {
 }
 
 .wrapper-img {
-    width: 280px;
-    height: 280px;
+    /* width: 280px;
+    height: 280px; */
     overflow: hidden;
 }
 
-/* .image_slider {
+.image_slider {
     display: flex;
     transition: all .8s ease;
 
-} */
+} 
 
-/* .image_slider:hover {
+ .image_slider:hover {
     transform: translateX(-100%);
-} */
+}
 
 .image_item {
     flex: 1 0 100%;
+    width: 110px;
 }
 
 .text {
