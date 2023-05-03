@@ -44,7 +44,7 @@ import * as yup from "yup";
             async handleLogin(user) {
               try {
                 await this.login(user);
-                location.href='http://localhost:8001/admin';
+                location.href='http://localhost:8001/homadmin';
               } catch (error) {
                 this.toast();
                 console.log(error);

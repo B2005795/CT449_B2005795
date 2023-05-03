@@ -16,38 +16,36 @@
         </div> -->
         <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
           <h6 class="text-success-emphasis mb-4">
-            SẢN PHẨM SHOP
+           Cửa hàng Len min
           </h6>
           <p>
-            <a href="#NL" class="text-white">NGUYÊN VẬT LIỆU</a>
+            <a href="/" class="text-white">Trang chủ</a>
           </p>
           <p>
-            <a href="#mockhoa" class="text-white">MÓC KHÓA</a>
+            <a href="/" class="text-white">Sản phẩm</a>
           </p>
           <p>
-            <a href="#hoa" class="text-white">SÉT TỰ LÀM</a>
+            <a href="/gioithieu" class="text-white">Giới thiệu</a>
           </p>
         </div>
-        <!-- <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
           <h6 class="text-uppercase fw-bold mb-4">
-            Useful links
+           Điều khoản dịch vụ
           </h6>
           <p>
-            <a href="#!" class="text-reset">Pricing</a>
+            <a href="#!" class="text-white">Chính sách bảo mật</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Settings</a>
+            <a href="#!" class="text-white">Mua hàng</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Orders</a>
+            <a href="#!" class="text-white">Đổi trả</a>
           </p>
-          <p>
-            <a href="#!" class="text-reset">Help</a>
-          </p>
-        </div> -->
+         
+        </div>
         <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
           <h6 class="text-success-emphasis fw-bold mb-4">
-              LIÊN HỆ
+             Chi tiết liên hệ
           </h6>
           <p class="text-white"><i class="bi bi-geo-alt-fill me-3 icon_ft"></i>Đại học Cần Thơ</p>
           <p class="text-white">
@@ -56,17 +54,9 @@
           </p>
           
           <p class="text-white"><i class="bi bi-phone-fill me-3 icon_ft"></i> +84 567 987 999</p>
-        
+        <p class="text-white"><i class="bi bi-alarm me-3 icon_ft"></i> Giờ hoạt động 8h-20h</p>
         </div>
-        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4"> 
-          <h6 class="text-success-emphasis mb-4">
-            <i class="fas fa-gem me-3 "></i>LEN MIN
-          </h6>
-          <p>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62860.41873446372!2d105.71439038075147!3d10.035320458234578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a0883fbc944b83%3A0x77fc34233e5e1320!2zTmluaCBLaeG7gXUsIEPhuqduIFRoxqEsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1681491002697!5m2!1svi!2s"
-             width="300" height="200" style="border:0;"  loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </p>
-        </div>
+       
       </div>
     </div>
   </section>

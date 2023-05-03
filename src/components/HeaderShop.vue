@@ -74,7 +74,7 @@ export default {
 <template>
   <ul class="nav justify-content-end nav_bk text-white">
     <li class="nav-item">
-      <a class="nav-link text-white" aria-current="page" href="#">Hotline: 09457853190</a>
+      <a class="nav-link text-white" aria-current="page" href="/lienhe">Hotline: 09457853190</a>
     </li>
     <li class="nav-item">
       <a class="nav-link text-white" href="https://www.google.com/intl/vi/gmail/about/">Email:

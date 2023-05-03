@@ -8,7 +8,7 @@ const routes = [
         component: ShopView,
     },
     {
-        path: "/search",
+        path: "/homadmin",
         name: "search",
         component: () => import("@/views/Search_t.vue"),
     },
@@ -81,6 +81,16 @@ const routes = [
         path: "/mockhoa",
         name: "mockhoa",
         component: () => import("@/views/Product_MK.vue"),
+    },
+    {
+        path: "/lienhe",
+        name: "lienhe",
+        component: () => import("@/views/LienHe.vue"),
+    },
+    {
+        path: "/gioithieu",
+        name: "gioithieu",
+        component: () => import("@/views/GioiThieu.vue"),
     },
 ];
 
