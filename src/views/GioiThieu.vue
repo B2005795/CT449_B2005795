@@ -1,5 +1,4 @@
 <script>
-import SliderShop from '@/components/SliderShop.vue'
 import HeaderShop from '@/components/HeaderShop.vue'
 import ProductService from '../services/Product.service'
 import { mapState } from "pinia";

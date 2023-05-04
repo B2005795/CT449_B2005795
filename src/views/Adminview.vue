@@ -144,6 +144,7 @@ export default {
                         name: 'editproduct',
                         params: { id: getindex._id },
                     }">
+                   
                     <p class="text-dark mt-4 text">
                         <i class="bi bi-pencil-square text-warning"></i> Chỉnh sửa</p>
                 </router-link>

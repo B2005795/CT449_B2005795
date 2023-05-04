@@ -143,9 +143,9 @@ export default {
        transition: all .8s ease;
        
     }
-    .image_slider:hover{ 
+    /* .image_slider:hover{ 
        transform: translateX(-100%);
-    }
+    } */
    .image_item{
        flex: 1 0 100%;
    }

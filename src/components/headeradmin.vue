@@ -1,6 +1,4 @@
 
-import InputSearch from './inputSearch.vue';
-
 <template>
     <nav class="nav_admin">
         <ul class="nav justify-content-center "  >
@@ -12,7 +10,7 @@ import InputSearch from './inputSearch.vue';
 <!-- <hr class="col-10 auto-mx"> -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light nav_admin">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/admin" style="font-size: 25px;">Trang chủ</a>
+    <a class="navbar-brand" href="/homadmin" style="font-size: 25px;">Trang chủ</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -33,9 +31,17 @@ import InputSearch from './inputSearch.vue';
         </li>
        
       </ul>
+ 
     </div>
+    <ul class="nav justify-content-end">
+  <li class="nav-item">
+    <a class="nav-link" aria-current="page" href="/loginadmin">Đăng xuất</a>
+  </li>
+</ul>
   </div>
+
 </nav>
+
     </nav>
 
 </template>

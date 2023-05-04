@@ -149,10 +149,10 @@ export default {
           </li>
         </ul>
 
-        <form class="d-flex flex-mb">
+        <!-- <form class="d-flex flex-mb">
         <input class="form-control me-2 hiden" id="input_search" type="search" placeholder="Tìm kiếm" aria-label="Search">
                 <button class="btn btn-outline-dart" type="button" @click="slideSearch()"><i class="bi bi-search icon"></i></button>
-      </form>
+      </form> -->
         <div class="Cart">
           <div class="wrapper_cart">
             <!-- <div class="cart_link" id="cart_link">
@@ -190,7 +190,7 @@ export default {
         </div>
         <div class="User">
           <div class="not-login">
-            <i class="bi bi-person-circle icon" data-bs-toggle="collapse" href="#user"></i>
+            <i class="bi bi-person-workspace icon" data-bs-toggle="collapse" href="#user"></i>
             <div class="collapse user_link" id="user">
               <div class="card card-body nav_card connect-shop">
                 <router-link to="/login" class="text-white">Đăng nhập</router-link>

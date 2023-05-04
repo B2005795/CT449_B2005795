@@ -58,10 +58,12 @@ export default {
 			</div>
 		</div>
 		<div class="auto-mx text-center">
-			<router-link to="/" >
+			<!-- <router-link to="/" >
 			<button class="btn btn-info">Trở về</button>
-		</router-link>
-		<button class="btn btn-warning" style="margin-left: 20px;" @click="showedit">Chỉnh sửa thông tin</button>
+		</router-link> -->
+		<p class="text-dark mt-4 text">
+                        <i class="bi bi-pencil-square text-warning" @click="showedit"></i> Chỉnh sửa thông tin</p>
+		<!-- <button class="btn btn-warning" style="margin-left: 20px;" >Chỉnh sửa thông tin</button> -->
 		</div>
 	</div>
 	<div v-if="checkedit" style="display: flex;flex-direction: column;justify-content: center;">

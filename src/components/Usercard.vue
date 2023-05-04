@@ -6,7 +6,7 @@ export default {
 };
 </script>
 <template>
-	<div class="d-flex">
+	<div class="d-flex col-sm-4">
         <div>
             <div class="p-1">
                 <strong>Tên:</strong>

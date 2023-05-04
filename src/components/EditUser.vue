@@ -43,7 +43,7 @@
         async updateUser(){
             try{
                 await UserService.update(this.infouser._id,this.infouser);
-                    this.toasts.title="Success",
+                    this.toasts.title="Thành công",
                     this.toasts.msg="Đã sửa thông tin vui lòng đăng nhập lại !",
                     this.toasts.type="success",
                     this.toasts.duration=3000
@@ -53,7 +53,7 @@
                     this.$router.push({name:"login"});
                 },2000);
             }catch(error){
-                    this.toasts.title="Faild",
+                    this.toasts.title="Lỗi",
                     this.toasts.msg="Có lỗi hoặc trùng tên người dùng",
                     this.toasts.type="error",
                     this.toasts.duration=3000

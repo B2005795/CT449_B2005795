@@ -99,7 +99,7 @@
         <Field type="text" class="form-control" id="colorproduct" name="color"  placeholder="Màu sắc sản phẩm" v-model="productLocal.color"/>
           <ErrorMessage name="color" class="text-danger" />
       </div>
-      <button type="submit" class="btn btn-info mt-4 fw-bold text-white">Cập nhật sản phẩm</button>
+      <button type="submit" class="btn btn-info mt-4  text-white">Thêm sản phẩm</button>
        <!-- <router-link to="/admin" style="margin: 10px;">
             <button class="btn btn-warning mt-4 text-white fw-bold">Trở về</button>
         </router-link>

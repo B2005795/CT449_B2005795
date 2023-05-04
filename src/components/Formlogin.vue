@@ -53,63 +53,48 @@
     };
 </script>
 <template >
+      
         <Form :validation-schema="Loginform" @submit="handleLogin">
-          <!-- <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
-            <p cass="lead fw-normal mb-0 me-3">Sign in with</p> -->
-            <!-- <button type="button" class="btn btn-link btn-floating mx-1">
-              <i class="bi bi-facebook"></i>
-            </button> -->
+       
+       <div class="form-outline mb-4 shadow-5">
+         <label class="form-label fw-bold" for="username">Tên đăng nhập</label>
+         <Field 
+             id="name"
+             placeholder="Nhập tên đăng nhập"
+             name="username"
+             type="text"
+             class="form-control form-control-lg"
+         />
+         <ErrorMessage name="username" class="text-danger" />
+       </div>
 
-            <!-- <button type="button" class="btn btn-link btn-floating mx-1">
-              <i class="bi bi-google"></i>
-            </button> -->
-
-            <!-- <button type="button" class="btn btn-link btn-floating mx-1">
-              <i class="bi bi-twitter"></i>
-            </button> -->
-          <!-- </div> -->
-          <!-- <div class="divider d-flex align-items-center my-4">
-            <p class="text-center fw-bold mx-3 mb-0">Or</p>
-          </div> -->
-          <!-- Email input -->
-          <div class="form-outline mb-4 shadow-5">
-            <label class="form-label fw-bold" for="username">Tên đăng nhập</label>
-            <Field 
-                id="name"
-                placeholder="Nhập tên đăng nhập"
-                name="username"
-                type="text"
-                class="form-control form-control-lg"
-            />
-            <ErrorMessage name="username" class="text-danger" />
-          </div>
-
-          <!-- Password input -->
-          <div class="form-outline mb-3">
-            <label class="form-label fw-bold" for="pwd">Mật khẩu</label>
-             <Field 
-                id="pwd"
-                placeholder="Nhập mật khẩu"
-                name="password"
-                type="password"
-                class="form-control form-control-lg"
-            />
-            <ErrorMessage name="password" class="text-danger"/>
-          </div>
-          <div class="d-flex justify-content-between align-items-center">
-            <!-- Checkbox -->
-            <div class="form-check mb-0">
-              <input class="form-check-input me-2" type="checkbox" value="" id="checkpwd" @click="showPwd()" />
-              <label class="form-check-label" for="checkpwd">
-                Hiện thị mật khẩu
-              </label>
-            </div>
-          </div>
-          <div class="text-center tex t-lg-start mt-4 pt-2">
-              <button class="btn btn-primary btn-lg"
-                style="padding-left: 2.5rem; padding-right: 2.5rem;">ĐĂNG NHẬP</button>
-            <p class="small mt-2 pt-1 mb-0">Bạn chưa có tài khoản??? <router-link to="/logup"
-                class="text-primary">ĐĂNG KÝ</router-link></p>
-          </div>
-        </Form>
+       <!-- Password input -->
+       <div class="form-outline mb-3">
+         <label class="form-label fw-bold" for="pwd">Mật khẩu</label>
+          <Field 
+             id="pwd"
+             placeholder="Nhập mật khẩu"
+             name="password"
+             type="password"
+             class="form-control form-control-lg"
+         />
+         <ErrorMessage name="password" class="text-danger"/>
+       </div>
+       <div class="d-flex justify-content-between align-items-center">
+         <!-- Checkbox -->
+         <!-- <div class="form-check mb-0">
+           <input class="form-check-input me-2" type="checkbox" value="" id="checkpwd" @click="showPwd()" />
+           <label class="form-check-label" for="checkpwd">
+             Hiện thị mật khẩu
+           </label>
+         </div> -->
+       </div>
+       <div class="text-center text-lg-start mt-4 pt-2">
+        <div class="row"></div>
+           <button class="btn btn-info btn-lg">ĐĂNG NHẬP</button>
+         <p class="small mt-2 pt-1 mb-0">Nếu bạn chưa có tài khoản <router-link to="/logup"
+             class="text-primary">Đăng ký</router-link></p>
+       </div>
+     </Form>
+     
 </template>

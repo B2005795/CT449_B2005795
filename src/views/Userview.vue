@@ -111,13 +111,14 @@ import inputSearch from "../components/inputSearch.vue";
         <div class="header text-center mt-4"  style="background-image: url(../assets/images/footer.jpg);">
             <!-- <h2>QUẢN TRỊ VIÊN</h2> -->
         </div>
-        <div class="main_admin container mt-4" >
-            <div class="list_users w-50" >
+        <div class="main_admin mt-4 " >
+<div class="container mx-auto-center">
+    <div class="list_users " >
                 <div class="user_heading">
                     <h4>DANH SÁCH NGƯỜI DÙNG</h4>
                 
                 </div>
-                    <div class="list_item_user  d-flex " id="user">
+                    <div class="list_item_user col-sm-5  d-flex " id="user">
                         <ListUser :users="users"  :refeshlist="getall" v-model:activeUser="activeUser"></ListUser>
                            <div class="card_product border border-light  text-dark"  style="padding: 30px;"  v-if="getindexuser">  
                             <h5>Chi tiết người dùng</h5>
@@ -125,6 +126,7 @@ import inputSearch from "../components/inputSearch.vue";
                         </div>
                     </div> 
             </div>
+</div>
 
            
         </div>

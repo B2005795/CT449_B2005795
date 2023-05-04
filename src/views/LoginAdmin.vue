@@ -5,10 +5,12 @@ import * as yup from "yup";
     import { mapActions } from "pinia";
     import { useAuthStore } from "@/stores/Auth.store";
     import toast from "../assets/js/toasts";
+    import Headeradmin from "../components/headeradmin.vue";
     export default {
         components: {
             Form,
             Field,
+            Headeradmin,
             ErrorMessage,
         },
         data() {
@@ -55,15 +57,15 @@ import * as yup from "yup";
 </script>
 <template >
 <toastsVue></toastsVue>
-<h1 style="margin-top: 100px ; margin-left: 100px;" class="text-center">ĐĂNG NHẬP ADMIN</h1>
-<div class="h-100 ">
+<Headeradmin></Headeradmin>
+<p style="font-size: 40px;" class="text-center mt-4">ĐĂNG NHẬP ADMIN</p>
+<div class="body_admin">
+ 
+
   <div class="container-fluid h-custom login">
-    <div class="row d-flex justify-content-center align-items-center h-100">
-      <div class="col-md-9 col-lg-6 col-xl-5">
-        <img src="../assets/images/bg_login.png"
-          class="img-fluid" alt="Sample image">
-      </div>
-      <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+    <div class="row d-flex justify-content-center align-items-center ">
+      
+      <div class=" offset-xl-1 col-8">
         
         <Form :validation-schema="Loginform" @submit="handleLogin">
         
@@ -92,16 +94,10 @@ import * as yup from "yup";
           <ErrorMessage name="password" class="text-danger"/>
         </div>
         <div class="d-flex justify-content-between align-items-center">
-          <!-- Checkbox -->
-          <!-- <div class="form-check mb-0">
-            <input class="form-check-input me-2" type="checkbox" value="" id="checkpwd" @click="showPwd()" />
-            <label class="form-check-label" for="checkpwd">
-              Hiện thị mật khẩu
-            </label>
-          </div> -->
+       
         </div>
         <div class="text-center tex t-lg-start mt-4 pt-2">
-            <button class="btn btn-primary btn-lg"
+            <button class="btn btn-info btn-lg"
               style="padding-left: 2.5rem; padding-right: 2.5rem;">ĐĂNG NHẬP</button>
        
         </div>
@@ -112,15 +108,10 @@ import * as yup from "yup";
 </div>  
 
 </template>
-<!-- <style>
-.login{
-    background-image: url('../assets/images/bg_login.png');
-    width: 100%;
-      height: 100%;
-      position: inherit;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-attachment: fixed; 
+<style>
+.body_admin{
+    background-image: url('../assets/images/admin_lo.jpg');
+    background-size: cover;
+    font-size: 25px;
 }
-</style> -->
+</style>

@@ -27,6 +27,9 @@
           <p>
             <a href="/gioithieu" class="text-white">Giới thiệu</a>
           </p>
+          <p>
+            <a href="/lienhe" class="text-white">Liên hệ</a>
+          </p>
         </div>
         <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
           <h6 class="text-uppercase fw-bold mb-4">

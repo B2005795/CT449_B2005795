@@ -45,7 +45,7 @@ import toastjs from "../assets/js/toasts";
     }
 </script>
 <template>
-        <ul class="list-group">
+        <ul class="list-group col-sm-5">
         <li 
 			class="list-group-item user-item d-flex justify-content-between" 
 			v-for="(user, index) in users"

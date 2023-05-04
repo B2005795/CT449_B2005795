@@ -7,6 +7,7 @@
 			  :product="product"
               @submit:product="updateProduct"
 		/>
+       
 	</div>
 </template>
 
