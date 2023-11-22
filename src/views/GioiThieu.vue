@@ -37,25 +37,19 @@ export default {
     
 
     <div class="container">
-        <h4 class="mt-4 text-center">CỬA HÀNG LEN MIN</h4>
-        <p>Với niềm đam mê về những món đồ handmade. Tôi đã mở cho bản thân một cửa hàng Len min với niềm đam mê 
-            cũng mong muốn có thể chia sẻ nguồn năng lượng tích cực với mọi người xung quanh, tạo ra những món quà tặng đầy ý nghĩa. Khi mới bắt đầu tôi còn khá bỡ ngỡ 
-            thiếu kinh nghiệm, gặp nhiều khó khăn trong những tháng đầu tiên. Nhưng nhờ sự ủng hộ của những người bạn, những người
-            có cùng sở thích, cùng niềm đam mê mà chúng tôi đã thành công như hôm nay. Đều do sự yêu thích cùng ủng hộ của tất cả mọi người</p>
+        <h4 class="mt-4 text-center">HD BookStore</h4>
+        <p>Chào mừng bạn đến với HD BookStore - điểm đến lý tưởng cho những đam mê sách! Chúng tôi tự hào là nơi bạn có thể khám phá và sở hữu những tác phẩm văn học tuyệt vời nhất từ mọi thể loại. HD BookStore cam kết mang đến trải nghiệm mua sắm sách trực tuyến độc đáo, thuận tiện và đầy hứng thú.
+</p>
            <div class="row mt-4">
             <div class="card" style="width: 18rem;">
-                <img src="../assets/images/GT/ao1.jpg" class="card-img-top" alt="...">
+                <img src="../assets/images/GT/sach_1.jpg" class="card-img-top" alt="...">
                 </div>
                 <div class="card" style="width: 18rem;">
-                <img src="../assets/images/GT/tui1.jpg" class="card-img-top" alt="...">
+                <img src="../assets/images/GT/sach_2.jpg" class="card-img-top" alt="...">
               
                 </div>
                 <div class="card" style="width: 18rem;">
-                <img src="../assets/images/GT/gau1.jpg" class="card-img-top" alt="...">
-              
-                </div>
-                <div class="card" style="width: 18rem;">
-                <img src="../assets/images/GT/hoa1.jpg" class="card-img-top" alt="...">
+                <img src="../assets/images/GT/sach_3.jpg" class="card-img-top" alt="...">
               
                 </div>
            </div>

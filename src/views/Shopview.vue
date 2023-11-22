@@ -123,8 +123,8 @@ export default {
                 <!-- <div class="image_slider"> -->
                 <a href="/hoa">
                     <div class="image_item">
-                        <img src="../assets/images/product/hoa1.jpg" class="card-img-top" alt="...">
-                        <h3 class="text text-center"> Quà tặng</h3>
+                        <img src="../assets/images/GT/sach_1.jpg" class="card-img-top" alt="...">
+                        <h3 class="text text-center" style="color: white;"> Sách tham khảo</h3>
                     </div>
                 </a>
                 <!-- </div> -->
@@ -141,8 +141,8 @@ export default {
                 <!-- <div class="image_slider"> -->
                 <a href="/nguyenlieu">
                     <div class="image_item">
-                        <h2 class="text text-center">Túi xách</h2>
-                        <img src="../assets/images/product/tui1.jpg" class="card-img-top" alt="...">
+                        <h2 class="text text-center" style="color: white;">Sách giải trí</h2>
+                        <img src="../assets/images/GT/sach_2.jpg" class="card-img-top" alt="...">
                     </div>
                 </a>
                 <!-- </div> -->
@@ -158,8 +158,8 @@ export default {
                 <!-- <div class="image_slider"> -->
                 <a href="/nguyenlieu">
                     <div class="image_item">
-                        <h3 class="text text-center">Nguyên vật liệu</h3>
-                        <img src="../assets/images/product/NL1.jpg" class="card-img-top" alt="...">
+                        <h3 class="text text-center" style="color: white;">Sách nước ngoài</h3>
+                        <img src="../assets/images/GT/sach_3.jpg" class="card-img-top" alt="...">
                     </div>
                 </a>
                 <!-- </div> -->
@@ -168,17 +168,15 @@ export default {
     </div>
 
 </div>
-
-
 <div class="col-sm-3">
     <div class="d-sm-flex flex-wrap" id="NL">
         <div class="card m-1">
             <div class="wrapper-img">
                 <!-- <div class="image_slider"> -->
-                <a href="/mockhoa">
+                <a href="/nguyenlieu">
                     <div class="image_item">
-                       <h3 class="text text-center">Móc khóa</h3>
-                        <img src="../assets/images/product/mockhoa1.jpg" class="card-img-top" alt="...">
+                        <h3 class="text text-center" style="color: white;">Sách nước ngoài</h3>
+                        <img src="../assets/images/GT/sach_1.jpg" class="card-img-top" alt="...">
                     </div>
                 </a>
                 <!-- </div> -->
@@ -187,12 +185,14 @@ export default {
     </div>
 
 </div>
+
+
+
         <div class=" row">
             <div class="container">
             <div style="text-align: center; margin: 30px 0;" class="heading">
               
-              <h3> SẢN PHẨM SHOP</h3>
-              <h6>Những sản phẩm tự làm hot nhất</h6>
+              <h3> SẢN PHẨM HD BOOKSTORE</h3>
           </div>
             <div class="container">
                 <inputSearch v-model="searchText" />

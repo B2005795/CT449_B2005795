@@ -16,7 +16,7 @@
         </div> -->
         <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
           <h6 class="text-success-emphasis mb-4">
-           Cửa hàng Len min
+           HD BookStore
           </h6>
           <p>
             <a href="/" class="text-white">Trang chủ</a>
@@ -53,8 +53,7 @@
           <p class="text-white"><i class="bi bi-geo-alt-fill me-3 icon_ft"></i>Đại học Cần Thơ</p>
           <p class="text-white">
             <i class="bi bi-envelope-fill icon_ft me-3"></i>
-            B1909880@gmail.com
-          </p>
+            B2005795_CT449@gmail.com          </p>
           
           <p class="text-white"><i class="bi bi-phone-fill me-3 icon_ft"></i> +84 567 987 999</p>
         <p class="text-white"><i class="bi bi-alarm me-3 icon_ft"></i> Giờ hoạt động 8h-20h</p>
@@ -64,7 +63,7 @@
     </div>
   </section>
   <div class="text-center p-4 text-white" style="background-color: rgb(39, 65, 65);">
-    © B1909880_CT449@gmail.com
+    © B2005795_CT449@gmail.com
   </div>
 </footer>
 </template>

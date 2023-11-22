@@ -74,11 +74,11 @@ export default {
 <template>
   <ul class="nav justify-content-end nav_bk text-white">
     <li class="nav-item">
-      <a class="nav-link text-white" aria-current="page" href="/lienhe">Hotline: 09457853190</a>
+      <a class="nav-link text-white" aria-current="page" href="/lienhe">Hotline: 0934638787</a>
     </li>
     <li class="nav-item">
       <a class="nav-link text-white" href="https://www.google.com/intl/vi/gmail/about/">Email:
-        B1909880_ct449@gmail.com</a>
+        B2005795_CT449@gmail.com </a>
     </li>
     <li class="nav-item">
       <a class="nav-link text-white" href="https://goo.gl/maps/Zz5DNu7ZDktFxCg57">Địa chỉ: Ninh Kiều, Cần Thơ</a>
@@ -89,7 +89,7 @@ export default {
 
   <div class="text-center">
     <a href="/">
-      <img src="../assets/images/logo1.jpg" alt="Yame.vn" width="150px">
+      <img src="../assets/images/HD BooK.png" alt="Yame.vn" width="150px">
     </a>
   </div>
 
@@ -117,33 +117,32 @@ export default {
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
               aria-expanded="false">
-              LEN SỢI
+              Sách
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#NL">Len milk</a></li>
-              <li><a class="dropdown-item" href="#NL">Kim móc len</a></li>
+              <li><a class="dropdown-item" href="#NL">Sách tham khảo</a></li>
+              <li><a class="dropdown-item" href="#NL">Sách nước ngoài</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
               aria-expanded="false">
-              THÀNH PHẨM
+              Xuất sứ
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#hoa">Sét hoa</a></li>
-              <li><a class="dropdown-item" href="#mockhoa">Sét con vật</a></li>
+              <li><a class="dropdown-item" href="#hoa">Nước ngoài</a></li>
+              <li><a class="dropdown-item" href="#mockhoa">Trong nước</a></li>
 
-              <li><a class="dropdown-item" href="#mockhoa">Túi len</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
               aria-expanded="false">
-              PHỤ KIỆN TRANG TRí
+              Các danh mục sách
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#NL">Hoa trang trí</a></li>
-              <li><a class="dropdown-item" href="#NL">Cúc trang trí</a></li>
+              <li><a class="dropdown-item" href="#NL">Sách tham khảo</a></li>
+              <li><a class="dropdown-item" href="#NL">Sách giải trí</a></li>
               <li><a class="dropdown-item" href="/search">Tìm</a></li>
             </ul>
           </li>

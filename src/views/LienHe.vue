@@ -42,7 +42,7 @@ export default {
             <ul>
                 
                 <li>SĐT: 0935678789</li>
-                <li>Email: B1909880_CT449@gmail.com</li>
+                <li>Email:B2005795_CT449@gmail.com</li>
                 <li>Địa chỉ: Đường 3/2, Xuân Khánh,Ninh Kiều, Cần Thơ</li>
             </ul>
             <h4>Địa chỉ văn phòng</h4>

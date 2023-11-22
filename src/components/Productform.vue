@@ -95,7 +95,7 @@
           <ErrorMessage name="size" class="text-danger" />
       </div>
        <div class="form-group ">
-        <label for="colorproduct">Màu sắc</label>
+        <label for="colorproduct">Tác giả</label>
         <Field type="text" class="form-control" id="colorproduct" name="color"  placeholder="Màu sắc sản phẩm" v-model="productLocal.color"/>
           <ErrorMessage name="color" class="text-danger" />
       </div>
